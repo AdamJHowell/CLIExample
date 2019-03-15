@@ -8,9 +8,11 @@ namespace Sandbox
 		static void Main( string[] args )
 		{
 			var e = new Entity( "The Wallman", 20, 35 );
-			Console.WriteLine( e.XPosition + " " + e.YPosition );
+			Console.WriteLine( e.XPosition1 + " " + e.YPosition );
 			e.Move( 5, -10 );
-			Console.WriteLine( e.XPosition + " " + e.YPosition );
+			Console.WriteLine( e.XPosition1 + " " + e.YPosition );
+
+			;
 
 			Console.Read();
 		}

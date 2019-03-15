@@ -11,7 +11,9 @@ namespace CLI
 
 		Entity( String^ name, float xPos, float yPos );
 		void Move( float deltaX, float deltaY );
-		property float XPosition
+		std::vector<std::string> * TypeAhead( std::string words, int count );
+		//void TypeAhead( std::string words, int count );
+		property float XPosition1
 		{
 			public:
 			float get()
