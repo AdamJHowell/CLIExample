@@ -9,17 +9,20 @@ namespace Core
 	{
 		public:
 		const char * m_Name;
-		
-		private:
-		float m_XPos;
-		float m_YPos;
-		
-		public:
-		Entity( const char * name, float xPos, float yPos );
+		char * m_word;
 
-		void Move( float deltaX, float deltaY );
-		std::vector<std::string> * TypeAhead( std::string words, int count );
-		inline float GetXPosition() const { return m_XPos; };
-		inline float GetYPosition() const { return m_YPos; };
+		private:
+		int m_XPos;
+		int m_YPos;
+		std::vector<std::string> stuff;
+
+		public:
+		Entity( const char * name, int xPos, int yPos );
+
+		void Move( int deltaX, int deltaY );
+		void TypeAhead( std::string words, int count );
+		inline int GetXPosition() const { return m_XPos; };
+		inline int GetYPosition() const { return m_YPos; };
+		inline std::vector<std::string> getVector() const { return stuff; };
 	};
 }

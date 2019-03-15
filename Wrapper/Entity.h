@@ -9,30 +9,50 @@ namespace CLI
 	{
 		public:
 
-		Entity( String^ name, float xPos, float yPos );
-		void Move( float deltaX, float deltaY );
-		std::vector<std::string> * TypeAhead( std::string words, int count );
-		//void TypeAhead( std::string words, int count );
-		property float XPosition1
+		Entity( String^ name, int xPos, int yPos );
+
+
+		void Move( int deltaX, int deltaY );
+
+
+		void TypeAhead( std::string words, int count );
+
+
+		property int XPosition1
 		{
 			public:
-			float get()
+			int get()
 			{
 				return m_Instance->GetXPosition();
 			}
 			private:
-			void set( float value )
+			void set( int value )
 			{}
 		}
-		property float YPosition
+
+
+		property int YPosition
 		{
 			public:
-			float get()
+			int get()
 			{
 				return m_Instance->GetYPosition();
 			}
 			private:
-			void set( float value )
+			void set( int value )
+			{}
+		}
+
+
+		property std::vector<std::string> GetVector
+		{
+			public:
+			std::vector<std::string> get()
+			{
+				return m_Instance->getVector();
+			}
+			private:
+			void set( std::vector<std::string> value )
 			{}
 		}
 	};
